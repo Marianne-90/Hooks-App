@@ -12,6 +12,7 @@ const { desc } = input;
   };
 
   const addList =()=>{
+    if (desc.length<1){return}
   return{
     id: new Date().getTime() + 100,
     description: desc,

@@ -1,13 +1,18 @@
 import {TodoItem} from './TodoItem.jsx'
 
-export const TodoList = ({ todos=[] }) => {
+export const TodoList = ({ todos=[], onDeleteTodo, onToggleTodo }) => {
+
+  
   
   return (
     <ul className="list-group">
 
       {
         todos.map(todos => (
-          <TodoItem key={todos.id} todos={todos}/>
+          <TodoItem key={todos.id} 
+            todos={todos} 
+            onDeleteTodo={onDeleteTodo} 
+            onToggleTodo={onToggleTodo}/>
         ))
       }
 
