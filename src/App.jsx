@@ -10,7 +10,11 @@ import { Memorize } from './06-memos/Memorize.jsx';
 import { MemorizeHooks } from './06-memos/MemorizeHooks.jsx';
 import { CallBackHook } from './06-memos/CallBackHook.jsx';
 import { Padre } from './07-tarea-memo/Padre.jsx';
-import {TodoApp} from './08-useReducer/TodoApp.jsx'
+import {TodoApp} from './08-useReducer/TodoApp.jsx';
+import {MainApp} from './09-useContext/MainApp.jsx';
+
+
+import { BrowserRouter } from 'react-router-dom';
 
 import { GiFishingHook } from "react-icons/gi";
 import { Cover } from './Cover.jsx'
@@ -35,7 +39,7 @@ export default function App() {
           </h1>
           <h5>{display}</h5>
           <AppIndex
-            index={['useState', 'useEffect', 'hookExamples', 'useRef', 'useLayoutEffect', 'memos', 'memosExample','useReducer']}
+            index={['useState', 'useEffect', 'hookExamples', 'useRef', 'useLayoutEffect', 'memos', 'memosExample','useReducer', 'useContext']}
             display={handleDisplay}
             active={display}
           />
@@ -51,7 +55,7 @@ export default function App() {
           {display === 'memos' && <> <Memorize /> <MemorizeHooks /> <CallBackHook /></>}
           {display === 'memosExample' && <> <Padre /> </>}
           {display === 'useReducer' && <> <TodoApp /> </>}
-
+          {display === 'useContext' && <>  <BrowserRouter> <MainApp />  </BrowserRouter> </>}
         </div>
 
       </div>
