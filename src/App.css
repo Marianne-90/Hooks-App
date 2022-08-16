@@ -107,3 +107,7 @@ button:not(.search, .delete){
 .chiken{
   font-size:65px;
 }
+
+nav{
+  margin-top:10px;
+}
