@@ -16,6 +16,7 @@ export const TodoApp = () => {
       <h4>Total: {todosCount}, <small>
         pendientes : {pendingTodosCount} </small>
       </h4>
+      <code>This is using local storage ;^)</code>
       <hr />
 
       <div className="row">
